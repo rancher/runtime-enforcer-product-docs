@@ -27,13 +27,3 @@
 * Development
 ** xref:build.adoc[Build Requirements]
 ** xref:setup-development-env.adoc[Development Environment]
-* RFCs
-** xref:rfc/0000-template.adoc[RFC 0000: Template]
-** xref:rfc/0001-workloadgroup.adoc[RFC 0001: Workload Group]
-** xref:rfc/0002-process-snapshot.adoc[RFC 0002: Process Snapshot]
-** xref:rfc/0003-otel-log-in-e2e-tests.adoc[RFC 0003: OTel Log in E2E Tests]
-** xref:rfc/0004-crds-policy-lifecycle.adoc[RFC 0004: CRDs Policy Lifecycle]
-** xref:rfc/0005-oci-hooks.adoc[RFC 0005: OCI Hooks]
-** xref:rfc/0006-violation-reporting.adoc[RFC 0006: Violation Reporting]
-** xref:rfc/0007-version_strategy.adoc[RFC 0007: Version Strategy]
-** xref:rfc/0008-violation-liveness.adoc[RFC 0008: Violation Liveness]

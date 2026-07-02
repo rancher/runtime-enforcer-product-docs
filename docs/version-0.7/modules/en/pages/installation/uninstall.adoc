@@ -1,0 +1,35 @@
+= Runtime-Enforcer Uninstall
+
+You can remove the Runtime-Enforcer and all the policies created by uninstalling the `helm` chart as follows:
+
+[source,bash]
+----
+helm uninstall runtime-enforcer --namespace runtime-enforcer
+----
+
+Please note that this command will not delete the existing WorkloadPolicy and WorkloadPolicyProposal.
+
+To remove them, you can run the following commands:
+
+[source,bash]
+----
+kubectl delete crd workloadpolicies.security.rancher.io
+kubectl delete crd workloadpolicyproposals.security.rancher.io
+----
+
+Note: Deletion of a `WorkloadPolicy` will fail while at least one pod is still referencing it. Remove the pod(s) first, then delete the policy.
+
+Finally, delete the namespace where Runtime-Enforcer was deployed:
+
+[source,bash]
+----
+kubectl delete ns runtime-enforcer
+----
+
+You can also delete the cert-manager:
+
+[source,bash]
+----
+helm uninstall cert-manager --namespace cert-manager
+kubectl delete ns cert-manager
+----

@@ -1,0 +1,31 @@
+= runtime-enforcer-product-docs
+
+SUSE product documentation for Runtime Enforcer, authored with https://antora.org[Antora].
+
+== Structure
+
+[source]
+----
+docs/
+  version-0.7/
+    antora.yml                 # Antora component descriptor
+    antora-yml/                # alternate component descriptors (product build)
+    modules/en/
+      nav.adoc                 # navigation tree
+      pages/                   # AsciiDoc pages (source of the docs)
+      images/                  # image assets
+      examples/                # example manifests and CRD generation tooling
+      partials/                # reusable AsciiDoc partials
+----
+
+== Building locally
+
+Install dependencies and generate the site:
+
+[source,bash]
+----
+npm install
+npx antora --fetch runtime-enforcer-local-playbook.yml
+----
+
+The generated site is written to `build/site`.

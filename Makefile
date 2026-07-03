@@ -5,6 +5,12 @@ local: tmpdir environment
 	npx antora --stacktrace --log-format=pretty --log-level=info \
 		runtime-enforcer-local-playbook.yml 2>&1 | tee -a tmp/build.log
 
+.PHONY: remote
+remote: tmpdir environment
+	npx antora --version | tee -a tmp/build.log
+	npx antora --stacktrace --log-format=pretty --log-level=info \
+		runtime-enforcer-remote-playbook.yml 2>&1 | tee -a tmp/build.log
+
 .PHONY: clean
 clean:
 	rm -rf build*

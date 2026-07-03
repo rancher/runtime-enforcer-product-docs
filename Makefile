@@ -1,14 +1,14 @@
 
 .PHONY: local
 local: tmpdir environment
-	npx antora --version | tee -a tmp/local-build.log
+	npx antora --version | tee -a tmp/build.log
 	npx antora --stacktrace --log-format=pretty --log-level=info \
-		runtime-enforcer-local-playbook.yml 2>&1 | tee -a tmp/local-build.log
+		runtime-enforcer-local-playbook.yml 2>&1 | tee -a tmp/build.log
 
 .PHONY: clean
 clean:
 	rm -rf build*
-	rm -rf tmp/*.log
+	rm -rf tmp/build*.log
 
 NPM_FLAGS = --no-color --no-progress
 .PHONY: environment

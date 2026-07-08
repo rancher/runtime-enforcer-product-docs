@@ -1,4 +1,6 @@
 = runtime-enforcer policy deny
+:revdate: 2026-07-08
+:page-revdate: {revdate}
 
 deny executables for a WorkloadPolicy container
 

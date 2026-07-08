@@ -1,4 +1,6 @@
 = runtime-enforcer policy
+:revdate: 2026-07-08
+:page-revdate: {revdate}
 
 Manage WorkloadPolicy
 

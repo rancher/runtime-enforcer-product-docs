@@ -1,19 +1,24 @@
 = Setup Development Environments
+:revdate: 2026-07-08
+:page-revdate: {revdate}
 
 Runtime enforcer supports Tilt to run development environment in your local.
 
 == Pre-requisite
 
-* On a supported Linux host to run a local kubernetes cluster, install a one node kubernetes cluster.
+* On a supported Linux host to run a local kubernetes cluster, install a one
+  node kubernetes cluster.
 * Setup golang development environments.
 
 == Steps
 
-[arabic]
-. Clone the repository: `git clone https://github.com/rancher-sandbox/runtime-enforcer.git`.
-. Install https://kubernetes.io/docs/reference/kubectl/[kubectl] and https://helm.sh/[helm].
+. Clone the repository: `git clone
+  https://github.com/rancher-sandbox/runtime-enforcer.git`.
+. Install https://kubernetes.io/docs/reference/kubectl/[kubectl] and
+  https://helm.sh/[helm].
 . Install https://docs.tilt.dev/install.html[tilt].
-. Install https://github.com/libbpf/libbpf[libbpf], so you can build ebpf programs at your local.
+. Install https://github.com/libbpf/libbpf[libbpf], so you can build ebpf
+  programs at your local.
 . Create `tilt-settings.yaml` based on `tilt-settings.yaml.example`.
 . Run `tilt up`. Related resources should be built and deployed.
 
@@ -28,11 +33,14 @@ kubectl get workloadpolicyproposals.security.rancher.io -A
 
 === golangci-lint
 
-You may want to install a pre-commit hook for golangci-lint, so you can fix linter issues at your local.
+You may want to install a pre-commit hook for golangci-lint, so you can fix
+linter issues at your local.
 
-[arabic]
-. Install golangci-lint, e.g., `go install github.com/golangci/golangci-lint/v2/cmd/golangci-lint@v2.6.0`
-. Install pre-commit hooks. You can also use tools like https://typicode.github.io/husky/[husky] or https://pre-commit.com/[pre-commit].
+. Install golangci-lint, e.g., `go install
+  github.com/golangci/golangci-lint/v2/cmd/golangci-lint@v2.6.0`
+. Install pre-commit hooks. You can also use tools like
+  https://typicode.github.io/husky/[husky] or
+  https://pre-commit.com/[pre-commit].
 
 [source,sh]
 ----
@@ -43,13 +51,14 @@ EOF
 chmod +x .git/hooks/pre-commit
 ----
 
-If you are using https://pre-commit.com/[pre-commit], you can run the following command to install the hooks we define in `.pre-commit-config.yaml`:
+If you are using https://pre-commit.com/[pre-commit], you can run the following
+command to install the hooks we define in `.pre-commit-config.yaml`:
 
 [source,sh]
 ----
 pre-commit install --install-hooks --hook-type pre-commit --overwrite
 # if you want to disable the hook
-pre-commit uninstall --hook-type pre-commit  
+pre-commit uninstall --hook-type pre-commit
 ----
 
 == Verified environment
@@ -59,7 +68,8 @@ pre-commit uninstall --hook-type pre-commit
 
 == Run bpfvalidator on our ebpf instrumentation
 
-As a first thing, install bpfvalidator on you machine downloading it from https://github.com/Andreagit97/bpfvalidator/releases, or build it from source.
+Install bpfvalidator on your machine downloading it from
+https://github.com/Andreagit97/bpfvalidator/releases, or build it from source.
 
 From the root of the repo
 

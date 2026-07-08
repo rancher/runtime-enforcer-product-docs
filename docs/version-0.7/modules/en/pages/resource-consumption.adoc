@@ -1,12 +1,19 @@
 = Runtime Enforcer Resource Consumption
+:revdate: 2026-07-08
+:page-revdate: {revdate}
 
-The Runtime Enforcer contains two main components. `controller` handles the interaction with the Kubernetes API server, and `agent` handles the behavior learning and low-level policy enforcement.
+The Runtime Enforcer contains two main components. `controller` handles the
+interaction with the Kubernetes API server, and `agent` handles the behavior
+learning and low-level policy enforcement.
 
-Given that these two components have different responsibilities, this document provides a high-level guide on how to configure these two components' resource utilization, especially in a large cluster.
+Given that these two components have different responsibilities, this document
+provides a high-level guide on how to configure these two components' resource
+utilization, especially in a large cluster.
 
 == Sizing recommendation
 
-We recommend explicitly configuring resource limits to match your cluster size. To do this, add the desired values as shown below in your helm chart overrides.
+We recommend explicitly configuring resource limits to match your cluster size.
+To do this, add the desired values as shown below in your helm chart overrides.
 
 ....
 controller:
@@ -27,19 +34,31 @@ agent:
       memory: 256Mi
 ....
 
-Note: By default, the Runtime Enforcer helm charts deploy these components as `Guaranteed` QoS by specifying the same value in both `requests` and `limits`. Please refer to https://kubernetes.io/docs/concepts/scheduling-eviction/node-pressure-eviction/#pod-selection-for-kubelet-eviction[Kubernetes Docs] if you want to set different values for `requests` and `limits`.
+[NOTE]
+====
+By default, the Runtime Enforcer helm charts deploy these components as
+`Guaranteed` QoS by specifying the same value in both `requests` and `limits`.
+Please refer to
+https://kubernetes.io/docs/concepts/scheduling-eviction/node-pressure-eviction/#pod-selection-for-kubelet-eviction[Kubernetes
+Docs] if you want to set different values for `requests` and `limits`.
+====
 
 There are a few factors to consider when sizing:
 
-[arabic]
 . The maximum pods per node
-. The total number of workloads, e.g., the total number of `Deployments`, `DaemonSets`, and `Pods`.
+. The total number of workloads, e.g., the total number of `Deployments`,
+  `DaemonSets`, and `Pods`.
 . The number of Runtime Enforcer custom resources, e.g., `WorkloadPolicies`.
-. The number of allowed rules per policy. (In the recommendation below, we assume there are 10 rules per policy on average.)
+. The number of allowed rules per policy. (In the recommendation below, we
+  assume there are 10 rules per policy on average.)
 
-In addition to these, Runtime Enforcer agent/controller pods need extra resources to handle security events and behavior learning. They also have to handle bursts during policy and workload reconciliation.
+Additionally, Runtime Enforcer agent/controller pods need extra resources to
+handle security events and behavior learning. They also have to handle bursts
+during policy and workload reconciliation.
 
-Based on these and the benchmark results, here is our recommendation. Please consider this as a starting point for your optimization instead of the final configuration, since every cluster could vary.
+Based on these and the benchmark results, this is our recommendation. Please
+consider this as a starting point for your optimization instead of the final
+configuration, since every cluster could vary.
 
 === Agent
 
@@ -64,9 +83,17 @@ Based on these and the benchmark results, here is our recommendation. Please con
 [[benchmark-results-v060]]
 == Benchmark Results v0.6.0
 
-In each test, CPU and memory utilization are collected from https://github.com/kubernetes-sigs/metrics-server[Kubernetes Metrics Server] for nodes and agent/controller pods. The throughput of execve calls is collected using https://github.com/torvalds/linux/blob/master/tools/perf/perf.c[Linux perf].
+In each test, CPU and memory utilization is collected from
+https://github.com/kubernetes-sigs/metrics-server[Kubernetes Metrics Server] for
+nodes and agent/controller pods. The throughput of execve calls is collected
+using https://github.com/torvalds/linux/blob/master/tools/perf/perf.c[Linux
+perf].
 
-Note: Depending on the timing when the metrics are collected, there could be variance in the numbers, especially in CPU utilization.
+[NOTE]
+====
+Depending on the timing when the metrics are collected, there could be
+variance in the numbers, especially in CPU utilization.
+====
 
 === Environment
 
@@ -102,7 +129,8 @@ The baseline is collected without any Runtime Enforcer components.
 
 === Scaling per pod
 
-In this part, pods associated with a single policy are created on the sampled node.
+In this part, pods associated with a single policy are created on the sampled
+node.
 
 [cols=",,,,,,,,,",options="header",]
 |===
@@ -128,7 +156,9 @@ In this part, each pod is associated with its own policy on the sampled node.
 
 === Controller Resource Utilization
 
-Unlike the per-node tests above, the metrics here were collected across all pods distributed on a 15-node GKE cluster. Each running pod is associated with its own policy without a node selector applied.
+Unlike the per-node tests above, the metrics here were collected across all pods
+distributed on a 15-node GKE cluster. Each running pod is associated with its
+own policy without a node selector applied.
 
 [cols=",,,",options="header",]
 |===

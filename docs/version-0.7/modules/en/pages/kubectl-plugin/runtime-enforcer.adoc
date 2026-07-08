@@ -1,4 +1,6 @@
 = runtime-enforcer
+:revdate: 2026-07-08
+:page-revdate: {revdate}
 
 == Synopsis
 

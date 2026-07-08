@@ -1,4 +1,6 @@
 = runtime-enforcer proposal promote
+:revdate: 2026-07-08
+:page-revdate: {revdate}
 
 Promote WorkloadPolicyProposal to WorkloadPolicy
 

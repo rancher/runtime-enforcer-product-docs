@@ -1,13 +1,18 @@
 = kubectl runtime-enforcer
+:revdate: 2026-07-08
+:page-revdate: {revdate}
 
-The `kubectl runtime-enforcer` plugin wraps common operations for `WorkloadPolicyProposal` and `WorkloadPolicy` CRDs.
+The `kubectl runtime-enforcer` plugin wraps common operations for
+`WorkloadPolicyProposal` and `WorkloadPolicy` CRDs.
 
-[[install]]
+[#install]
 == Installation
 
 === Download a pre-built binary
 
-Pre-built binaries for `linux/amd64`, `linux/arm64`, `darwin/amd64`, and `darwin/arm64` are published on each https://github.com/rancher-sandbox/runtime-enforcer/releases[GitHub Release].
+Pre-built binaries for `linux/amd64`, `linux/arm64`, `darwin/amd64`, and
+`darwin/arm64` are published on each
+https://github.com/rancher-sandbox/runtime-enforcer/releases[GitHub Release].
 
 [source,bash]
 ----
@@ -48,8 +53,9 @@ make kubectl-plugin-cross    # output: bin/kubectl-plugin/kubectl-runtime_enforc
 
 === Enable auto-completion
 
-To enable auto-completion, make sure that you enable the auto-completion of kubectl.
-Then, create a script called `kubectl_complete-runtime_enforcer` following the below steps:
+To enable auto-completion, make sure that you enable the auto-completion of
+kubectl. Then, create a script called `kubectl_complete-runtime_enforcer`
+following the below steps:
 
 [source,bash]
 ----
@@ -63,7 +69,9 @@ sudo mv kubectl_complete-runtime_enforcer /usr/local/bin/
 
 === Promote a proposal (Learn → Monitor)
 
-Promoting a `WorkloadPolicyProposal` sets the `security.rancher.io/policy-ready=true` label and lets the controller create a `WorkloadPolicy`.
+Promoting a `WorkloadPolicyProposal` sets the
+`security.rancher.io/policy-ready=true` label and lets the controller create a
+`WorkloadPolicy`.
 
 *Plugin:*
 
@@ -72,7 +80,8 @@ Promoting a `WorkloadPolicyProposal` sets the `security.rancher.io/policy-ready=
 kubectl runtime-enforcer proposal promote <PROPOSAL_NAME> -n <namespace>
 ----
 
-Use `kubectl runtime-enforcer proposal promote --dry-run` to validate without persisting.
+Use `kubectl runtime-enforcer proposal promote --dry-run` to validate without
+persisting.
 
 === Switch monitor ↔ protect
 
@@ -90,7 +99,8 @@ Use `--dry-run` on `policy protect` and `policy monitor` to preview.
 
 === Allowing/denying executables
 
-To limit or expand allowed executables, add or remove executable paths on a per-container basis:
+To limit or expand allowed executables, add or remove executable paths on a
+per-container basis:
 
 *Plugin:*
 

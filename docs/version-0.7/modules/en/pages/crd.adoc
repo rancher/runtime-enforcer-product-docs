@@ -1,5 +1,7 @@
 // Generated documentation. Please do not edit.
 = CRD API Reference
+:revdate: 2026-07-08
+:page-revdate: {revdate}
 :anchor_prefix: k8s-api
 :p: runtime-enforcer
 

@@ -1,4 +1,4 @@
-* xref:index.adoc[Introduction]
+* xref:introduction.adoc[Introduction]
 * Installation
 ** xref:installation/quickstart.adoc[Quick Start]
 ** xref:installation/uninstall.adoc[Uninstall]
@@ -23,7 +23,6 @@
 *** xref:kubectl-plugin/runtime-enforcer_proposal.adoc[runtime-enforcer proposal]
 **** xref:kubectl-plugin/runtime-enforcer_proposal_promote.adoc[proposal promote]
 ** xref:resource-consumption.adoc[Resource Consumption]
-** xref:crds/README.adoc[CRD Documentation Generation]
 * Development
 ** xref:build.adoc[Build Requirements]
 ** xref:setup-development-env.adoc[Development Environment]

@@ -1,4 +1,6 @@
 = runtime-enforcer policy show protection
+:revdate: 2026-07-08
+:page-revdate: {revdate}
 
 List workloads to WorkloadPolicy protection mapping
 

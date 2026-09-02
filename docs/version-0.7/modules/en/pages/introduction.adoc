@@ -1,9 +1,11 @@
-= Runtime Enforcer
+include::partial$variables.adoc[]
+
+= {rte-name}
 :revdate: 2026-07-08
 :page-revdate: {revdate}
-:description: Runtime Enforcer uses eBPF to monitor and enforce process-execution security policies for Kubernetes workloads.
+:description: {rte-name} uses eBPF to monitor and enforce process-execution security policies for Kubernetes workloads.
 
-Runtime Enforcer is a Kubernetes security tool that uses eBPF (Extended Berkeley
+{rte-name} is a Kubernetes security tool that uses eBPF (Extended Berkeley
 Packet Filter) to observe process executions in your workloads and to enforce
 allow-list based security policies at the kernel level.
 
@@ -17,7 +19,7 @@ It operates in three phases:
 
 == Getting started
 
-* xref:installation/quickstart.adoc[] -- deploy Runtime Enforcer and walk
+* xref:installation/quickstart.adoc[] -- deploy {rte-short-name} and walk
   through the learn/monitor/protect workflow.
 * xref:compatibility.adoc[] -- kernel, architecture and platform requirements.
 * xref:phases.adoc[] -- understand the learn, monitor and protect phases in

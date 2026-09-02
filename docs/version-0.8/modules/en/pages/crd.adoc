@@ -1,3 +1,5 @@
+include::partial$variables.adoc[]
+
 // Generated documentation. Please do not edit.
 = CRD API Reference
 :revdate: 2026-08-04

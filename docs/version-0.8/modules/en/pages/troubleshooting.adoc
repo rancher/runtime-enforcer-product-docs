@@ -1,3 +1,5 @@
+include::partial$variables.adoc[]
+
 = Troubleshooting
 :revdate: 2026-08-04
 :page-revdate: {revdate}
@@ -172,7 +174,7 @@ followed by a full dump of the agent cache for that node.
 
 == NRI timeouts and required plugins
 
-Runtime Enforcer relies on NRI (Node Resource Interface) integration provided by
+{rte-name} relies on NRI (Node Resource Interface) integration provided by
 the container runtime.
 
 Some environments may hit the NRI default request timeout (`5s` to register a

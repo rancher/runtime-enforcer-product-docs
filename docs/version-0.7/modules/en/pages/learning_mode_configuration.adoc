@@ -1,4 +1,6 @@
-= Runtime-Enforcer Learning Mode Configuration
+include::partial$variables.adoc[]
+
+= {rte-name} Learning Mode Configuration
 :revdate: 2026-07-08
 :page-revdate: {revdate}
 
@@ -10,7 +12,7 @@ that run. Then, it creates or update a `WorkloadPolicyProposal` in the
 workload namespace with the list of observed executables.
 
 == Configuration Options
-By default, Runtime-Enforcer starts in *learning* mode for **all namespaces**:
+By default, {rte-name} starts in *learning* mode for **all namespaces**:
 
 [source,yaml]
 ----

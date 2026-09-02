@@ -1,3 +1,5 @@
+include::partial$variables.adoc[]
+
 = runtime-enforcer policy monitor
 :revdate: 2026-07-08
 :page-revdate: {revdate}

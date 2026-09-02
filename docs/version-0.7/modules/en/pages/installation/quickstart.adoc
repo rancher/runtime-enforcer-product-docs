@@ -1,14 +1,14 @@
 include::partial$variables.adoc[]
 
-= Runtime-Enforcer Quick Start
+= {rte-name} Quick Start
 :revdate: 2026-07-08
 :page-revdate: {revdate}
 
-Welcome to the Runtime-Enforcer Quick Start!
+Welcome to the {rte-name} Quick Start!
 
 This guide walks you through the following steps:
 
-* Deploying the Runtime-Enforcer in a Kubernetes cluster
+* Deploying the {rte-short-name} in a Kubernetes cluster
 * Deploying a simple workload and looking at the generated
   WorkloadPolicyProposal.
 * Converting the WorkloadPolicyProposal into a WorkloadPolicy in monitor mode
@@ -66,13 +66,13 @@ helm install cert-manager-csi-driver jetstack/cert-manager-csi-driver \
 	--wait
 ----
 
-== Deploy Runtime-Enforcer
+== Deploy {rte-short-name}
 
-Follow these simple steps from your local machine to get Runtime-Enforcer up and running:
+Follow these simple steps from your local machine to get {rte-short-name} up and running:
 
 === Install the Helm chart
 
-Runtime-Enforcer ships with a standalone OTEL collector Deployment that handles violation metrics and events forwarding.
+{rte-short-name} ships with a standalone OTEL collector Deployment that handles violation metrics and events forwarding.
 No external OpenTelemetry Collector is needed for a basic setup.
 
 [subs="+attributes",console]
@@ -128,12 +128,12 @@ runtime_enforcer_violations_total{action="monitor",k8s_namespace_name="default",
 
 === Summary
 
-At this point, Runtime-Enforcer is up and running. You're now ready to write
+At this point, {rte-short-name} is up and running. You're now ready to write
 some policies.
 
 == WorkloadPolicyProposal generation
 
-When Runtime-Enforcer starts, it observes newly started processes on the node.
+When {rte-short-name} starts, it observes newly started processes on the node.
 For each Kubernetes workload, it generates a `WorkloadPolicyProposal` containing
 the list of observed executables. Executables that ran before the agent started
 won't be visible in the proposal.

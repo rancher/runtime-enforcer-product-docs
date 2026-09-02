@@ -1,8 +1,10 @@
-= Runtime Enforcer Resource Consumption
+include::partial$variables.adoc[]
+
+= {rte-name} Resource Consumption
 :revdate: 2026-08-04
 :page-revdate: {revdate}
 
-The Runtime Enforcer contains two main components. `controller` handles the
+The {rte-name} contains two main components. `controller` handles the
 interaction with the Kubernetes API server, and `agent` handles the behavior
 learning and low-level policy enforcement.
 

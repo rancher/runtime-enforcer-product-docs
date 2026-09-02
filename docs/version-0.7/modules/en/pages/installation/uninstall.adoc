@@ -1,8 +1,10 @@
-= Runtime-Enforcer Uninstall
+include::partial$variables.adoc[]
+
+= {rte-name} Uninstall
 :revdate: 2026-07-08
 :page-revdate: {revdate}
 
-You can remove the Runtime-Enforcer and all the policies created by uninstalling
+You can remove the {rte-name} and all the policies created by uninstalling
 the `helm` chart as follows:
 
 [source,bash]
@@ -27,7 +29,7 @@ Deletion of a `WorkloadPolicy` will fail while at least one pod is still
 referencing it. Remove the pod(s) first, then delete the policy.
 ====
 
-Finally, delete the namespace where Runtime-Enforcer was deployed:
+Finally, delete the namespace where {rte-short-name} was deployed:
 
 [source,bash]
 ----

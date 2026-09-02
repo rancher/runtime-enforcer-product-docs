@@ -1,3 +1,7 @@
 // Version independent shared attributes for the product-specific version.
 
+:rte-name: SUSE Security Runtime Enforcer
+:rte-short-name: Runtime Enforcer
+:rte-abbrev: RTE
+
 :runtime-enforcer-helm-chart: oci://dp.apps.rancher.io/charts/suse-security-runtime-enforcer

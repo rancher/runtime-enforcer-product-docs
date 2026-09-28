@@ -1,6 +1,7 @@
 include::partial$variables.adoc[]
 
 = Troubleshooting
+:description: Troubleshoot runtime-enforcer issues by checking logs and status fields to identify and resolve policy enforcement problems
 :revdate: 2026-07-08
 :page-revdate: {revdate}
 

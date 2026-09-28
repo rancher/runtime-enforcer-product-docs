@@ -1,6 +1,7 @@
 include::partial$variables.adoc[]
 
 = Setup Development Environments
+:description: Set up a local development environment using Tilt, Kubernetes, and Go by following the provided steps and configuration examples
 :revdate: 2026-07-08
 :page-revdate: {revdate}
 

@@ -1,6 +1,7 @@
 include::partial$variables.adoc[]
 
 = {rte-name} phases: learn, monitor, protect
+:description: Learn how to move between the learn, monitor, and protect phases of runtime-enforcer and what happens during each phase
 :revdate: 2026-07-08
 :page-revdate: {revdate}
 

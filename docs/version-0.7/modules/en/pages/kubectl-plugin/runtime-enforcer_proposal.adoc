@@ -1,6 +1,7 @@
 include::partial$variables.adoc[]
 
 = runtime-enforcer proposal
+:description: Promote WorkloadPolicyProposal to WorkloadPolicy by managing options and inheriting settings from parent commands to define and enforce runtime policies
 :revdate: 2026-07-08
 :page-revdate: {revdate}
 

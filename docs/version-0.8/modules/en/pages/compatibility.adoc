@@ -1,6 +1,7 @@
 include::partial$variables.adoc[]
 
 = Compatibility
+:description: Check your kernel version and configuration to ensure it supports the eBPF features required for monitoring and enforcing security policies at the kernel
 :revdate: 2026-08-04
 :page-revdate: {revdate}
 

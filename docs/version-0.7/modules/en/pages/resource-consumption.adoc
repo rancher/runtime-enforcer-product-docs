@@ -1,6 +1,7 @@
 include::partial$variables.adoc[]
 
 = {rte-name} Resource Consumption
+:description: Configure the resource limits for the controller and agent to match your cluster size based on workload and policy requirements
 :revdate: 2026-07-08
 :page-revdate: {revdate}
 

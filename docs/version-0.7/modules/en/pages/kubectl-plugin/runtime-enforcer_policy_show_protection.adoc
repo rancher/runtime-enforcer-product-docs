@@ -1,6 +1,7 @@
 include::partial$variables.adoc[]
 
 = runtime-enforcer policy show protection
+:description: Show WorkloadPolicy protection mapping for runtime-enforcer policy to list workloads with their assigned protection options and inherited settings from parent
 :revdate: 2026-07-08
 :page-revdate: {revdate}
 

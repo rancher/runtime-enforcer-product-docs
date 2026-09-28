@@ -1,6 +1,7 @@
 include::partial$variables.adoc[]
 
 = runtime-enforcer policy deny
+:description: Deny specific executables from running inside a WorkloadPolicy container by configuring the runtime-enforcer policy to restrict which programs can execute
 :revdate: 2026-07-08
 :page-revdate: {revdate}
 

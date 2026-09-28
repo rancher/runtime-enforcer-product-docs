@@ -1,6 +1,7 @@
 include::partial$variables.adoc[]
 
 = {rte-name} Quick Start
+:description: Start a simple workload and generate a WorkloadPolicyProposal to create and test a policy for enforcing allowed processes
 :revdate: 2026-07-08
 :page-revdate: {revdate}
 

@@ -1,6 +1,7 @@
 include::partial$variables.adoc[]
 
 = {rte-name} Learning Mode Configuration
+:description: Configure runtime-enforcer to run in learning mode and observe process executions to generate or update WorkloadPolicyProposal with observed executable paths
 :revdate: 2026-08-04
 :page-revdate: {revdate}
 

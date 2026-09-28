@@ -1,6 +1,7 @@
 include::partial$variables.adoc[]
 
 = {rte-name} Uninstall
+:description: Uninstall the application and all related policies by running specific helm chart commands that remove the deployment and associated resources while leaving
 :revdate: 2026-07-08
 :page-revdate: {revdate}
 

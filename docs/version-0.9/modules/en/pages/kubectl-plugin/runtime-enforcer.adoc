@@ -1,6 +1,7 @@
 include::partial$variables.adoc[]
 
 = runtime-enforcer
+:description: Manage WorkloadPolicy and WorkloadPolicyProposal using the Kubernetes plugin for SUSE Security Runtime Enforcer
 :revdate: 2026-08-04
 :page-revdate: {revdate}
 

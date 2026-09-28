@@ -1,6 +1,7 @@
 include::partial$variables.adoc[]
 
 = Known limitations
+:description: Understand the current known limitations of runtime-enforcer and how they affect policy learning and enforcement
 :revdate: 2026-08-04
 :page-revdate: {revdate}
 

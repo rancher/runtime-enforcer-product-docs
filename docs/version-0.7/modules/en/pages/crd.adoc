@@ -2,6 +2,7 @@ include::partial$variables.adoc[]
 
 // Generated documentation. Please do not edit.
 = CRD API Reference
+:description: Find details about the CRD API Reference that describe the schema definitions, resource types, and related objects for managing workload policies and node
 :revdate: 2026-07-08
 :page-revdate: {revdate}
 :anchor_prefix: k8s-api
